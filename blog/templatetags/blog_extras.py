@@ -57,8 +57,8 @@ def author_details_tag(context):
     return format_html("{}{}{}", prefix, name, suffix)
 
 @register.simple_tag
-def row():
-    return format_html('<div class="row">', 'border-bottom')
+def row(extra_classes=''):
+    return format_html('<div class="row {}">'.format(extra_classes))
 
 
 @register.simple_tag
